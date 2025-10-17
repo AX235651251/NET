@@ -1,0 +1,142 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    object-fit: cover;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    min-height: 1px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    background: #fff;
+    padding: 2rem;
+    width: 98%;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+#gallery img {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+#brand-intro h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    #brand-intro h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    section:not(#gallery) {
+        display: flex;
+        align-items: center;
+    }
+
+    section:nth-child(even):not(#gallery) {
+        flex-direction: row-reverse;
+    }
+
+    section:not(#gallery) img {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    section:not(#gallery) .content {
+        width: 50%;
+        padding: 2rem;
+    }
+}
