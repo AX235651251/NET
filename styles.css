@@ -9,15 +9,19 @@ body {
 
 .banner {
     width: 100%;
-    height: 100vh;
-    background: #fff;
+    height: 70vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .banner-image {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: block;
     object-fit: cover;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -37,12 +41,20 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 section {
     background: #fff;
     padding: 2rem;
     width: 98%;
+    margin-top: 0;
+}
+
+section:first-child {
+    margin-top: 0;
+    padding-top: 2rem;
 }
 
 section img {
@@ -107,6 +119,25 @@ li {
 }
 
 @media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .banner-image {
+        object-position: center center;
+    }
+
+    main {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    section:first-child {
+        margin-top: 0;
+        padding-top: 1.5rem;
+    }
+
     #brand-intro h1 {
         font-size: 2rem;
     }
@@ -117,6 +148,20 @@ li {
 
     section h3 {
         font-size: 1.3rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    #brand-intro h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    #brand-intro h1 {
+        font-size: 1.6rem;
     }
 }
 
