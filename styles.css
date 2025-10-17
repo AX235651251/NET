@@ -134,14 +134,16 @@ li {
     }
 
     .banner {
-        height: 50vh;
-        min-height: 300px;
+        height: auto;
+        min-height: auto;
         width: 100%;
         max-width: 100%;
     }
 
     .banner-image {
-        object-position: center center;
+        height: auto;
+        object-fit: contain;
+        object-position: center top;
     }
 
     main {
